@@ -88,28 +88,24 @@
       <!-- Start Hero Block -->
       <header>
         <h1 style="display: none;">Spencer Wood's Web Developer and Designer Portfolio</h1>
-        <div id="hero-block" class="hero-block bg-image"
-          style="background-image: url('assets/images/citybackground.jpg')">
+        <div id="hero-block" class="hero-block bg-image">
           <div id="particles-js"></div>
           <div class="container">
             <div class="row">
-              <div class="col-md-8">
-                <div class="hero-content-area">
-                  <div class="hero-intro"></div>
-                  <div class="hero-name">
-                    <img src="assets/images/hero-name-curved.png" alt="Spencer Wood" title="Spencer Wood" />
-                  </div>
-
-                  <ul class="hero-services thin-stroke">
-                    <li class="hero-list">Designer</li>
-                    <li class="hero-list">Developer</li>
-                    <li class="hero-list">Web Slinger</li>
-                  </ul>
+              <div class="hero-content-area">
+                <div class="hero-intro"></div>
+                <div class="hero-name">
+                  <img src="assets/images/hero-name-curved.png" alt="Spencer Wood" title="Spencer Wood" />
                 </div>
+
+                <ul class="hero-services thin-stroke">
+                  <li class="hero-list">Designer</li>
+                  <li class="hero-list">Developer</li>
+                  <li class="hero-list">Web Slinger</li>
+                </ul>
                 <a href="#portfolio-block" class="btn btn-primary">View My Work</a>
                 <a href="#contact-block" class="btn btn-secondary">Contact Me</a>
               </div>
-              <!-- col-8 -->
             </div>
             <!-- row -->
           </div>
@@ -120,7 +116,7 @@
 
       <!-- Start Services Block -->
       <section id="service-block" class="services-block section-padding">
-        <div class="container container-1200">
+        <div class="container">
 
           <div class="section-title text-center">
             <h2 class="title-main">Ch. 1 &nbsp;<span>Abilities</span></h2>
@@ -208,17 +204,17 @@
 
       <!-- Start About Block -->
       <section id="about-block" class="about-block section-padding">
-        <article class="container container-1200" style="display: flex; flex-direction: column;">
-          <header class="row justify-content-center">
+        <article class="about-container container">
+          <header class="row">
 
-            <div class="section-title text-center">
+            <div class="section-title">
               <h2 class="title-main">Ch. 2 &nbsp;<span>Who Am I?</span></h2>
             </div>
 
           </header>
           <!-- row -->
 
-          <div class="about-story row align-items-center flex-column-reverse flex-lg-row" style="margin-bottom: 55px;">
+          <div class="about-story row">
             <div class="about-bio">
               <div class="about-content">
                 <p class="description">I'm Spencer Wood!</p>
@@ -259,7 +255,7 @@
               </div>
             </div>
 
-            <div class="" style="display: flex; flex-direction: column; flex-basis: 50%;">
+            <div class="headshot-container">
               <figure class="comic-headshot">
                 <a href="https://www.linkedin.com/in/spencer-wood-web-dev/" target="_blank">
                   <img src="assets/images/hero-headshot.jpg" alt="Spencer Wood in comic style photo" />
@@ -279,20 +275,18 @@
       <!-- Start Portfolio Block -->
       <section id="portfolio-block" class="portfolio-block section-padding">
         <div class="container">
-          <div class="justify-content-center">
 
-            <div class="section-title text-center">
-              <h2 class="title-main">Ch. 3 &nbsp;<span>My Work</span></h2>
-              <p class="sub-title">Take a look at the work I'm doing.</p>
-            </div>
-
+          <div class="section-title">
+            <h2 class="title-main">Ch. 3 &nbsp;<span>My Work</span></h2>
+            <p class="sub-title">Take a look at the work I'm doing.</p>
           </div>
+
         </div>
         <!-- container -->
 
-        <div class="container custom-container-1650">
+        <div class="container">
 
-          <div class="row portfolio-grid gutters-40">
+          <div class="row portfolio-grid">
             <div class="item col-md-6 col-lg-4">
               <a class="portfolio-item" href="https://audiofy-app-797a94.netlify.app/">
                 <figure class="portfolio-thumb">
@@ -427,7 +421,7 @@
 
               <div class="contact-form-area">
                 <form id="contact-form" name="contact" method="POST" data-netlify="true">
-                  <div class="row gx-4">
+                  <div class="row">
                     <div class="col-6">
                       <div class="form-group">
                         <p>
@@ -486,48 +480,46 @@
                     </aside>
                   </div>
 
-                  <div class="col-md-9 col-sm-12">
-                    <aside class="footer">
-                      <div class="footer-content">
-                        <div class="social-status">
-                          <div class="social-profile-list">
-                            <a href="https://www.linkedin.com/in/spencer-wood-web-dev/"><i
-                                class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/TheGoldenDev"><i class="fab fa-github"></i></a>
-                          </div>
+                  <aside class="footer">
+                    <div class="footer-content">
+                      <div class="social-status">
+                        <div class="social-profile-list">
+                          <a href="https://www.linkedin.com/in/spencer-wood-web-dev/"><i
+                              class="fab fa-linkedin-in"></i></a>
+                          <a href="https://github.com/TheGoldenDev"><i class="fab fa-github"></i></a>
                         </div>
-                        <div class="single-contact-info">
-                          <div class="icon">
-                            <a href="mailto:spencer.uab@gmail.com">
-                              <i class="fas fa-envelope"></i>
-                            </a>
-                          </div>
-                          <p>
-                            <a href="mailto:spencer.uab@gmail.com">spencer.uab@gmail.com</a>
-                          </p>
-                        </div>
-
-                        <div class="single-contact-info">
-                          <div class="icon">
-                            <a href="tel:+12053707723">
-                              <i class="fas fa-phone-alt"></i>
-                            </a>
-                          </div>
-                          <p>
-                            <a href="tel:+12053707723">205 370 7723</a>
-                          </p>
-                        </div>
-
                       </div>
-                    </aside>
-                  </div>
+                      <div class="single-contact-info">
+                        <div class="icon">
+                          <a href="mailto:spencer.uab@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                          </a>
+                        </div>
+                        <p>
+                          <a href="mailto:spencer.uab@gmail.com">spencer.uab@gmail.com</a>
+                        </p>
+                      </div>
+
+                      <div class="single-contact-info">
+                        <div class="icon">
+                          <a href="tel:+12053707723">
+                            <i class="fas fa-phone-alt"></i>
+                          </a>
+                        </div>
+                        <p>
+                          <a href="tel:+12053707723">205 370 7723</a>
+                        </p>
+                      </div>
+
+                    </div>
+                  </aside>
 
                 </div>
               </div>
               <!--  end footer area -->
             </div>
             <div class="row">
-              <div class="copyright-text text-center">
+              <div class="copyright-text">
                 <p>All Rights Reserved 2022</p>
               </div>
             </div>
