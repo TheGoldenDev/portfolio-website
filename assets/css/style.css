@@ -467,6 +467,9 @@ Header
 .site-header .navigation-area .logo a {
   display: inline-block;
 }
+.logo {
+  pointer-events: all;
+}
 .logo img {
   height: 75px;
 }
@@ -480,6 +483,7 @@ Header
 }
 .site-header .mobile-sidebar-menu {
   display: block;
+  pointer-events: all;
 }
 @media only screen and (min-width: 1200px) {
   .site-header .mobile-sidebar-menu {
@@ -495,6 +499,7 @@ Header
   left: 0;
   z-index: 99;
   background-color: transparent;
+  pointer-events: none;
 }
 @media (min-width: 576px) {
   .site-header.default-header-style {
@@ -576,6 +581,7 @@ Nav Menu
   .mainmenu > li {
     display: inline-block;
     position: relative;
+    pointer-events: all;
   }
   .mainmenu li {
     list-style: none;
@@ -643,6 +649,7 @@ Mobile Menu
   width: 40px;
   display: none;
   cursor: pointer;
+  pointer-events: all;
 }
 .hamburger-menus > span {
   width: 40px;
