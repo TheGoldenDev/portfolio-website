@@ -1031,6 +1031,27 @@ Services
     transform: scale(1);
   }
 }
+.service-item {
+  animation-name: wiggle;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes wiggle {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
 .service-item .title {
   color: #bf222a;
   font-size: 2.5rem;
