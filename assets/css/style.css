@@ -356,6 +356,7 @@ li > ol {
   background-color: #bf222a;
   padding: 12px 25px;
   margin-top: 6px;
+  pointer-events: all;
 }
 @media (min-width: 768px) {
   .btn-primary {
@@ -947,6 +948,7 @@ Hero
   border-radius: 5px;
   margin-top: 6px;
   min-width: 20px;
+  pointer-events: all;
 }
 @media (min-width: 768px) {
   .hero-block .btn-secondary {
