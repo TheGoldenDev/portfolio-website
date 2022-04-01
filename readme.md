@@ -5,13 +5,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<!-- PROJECT LOGO -->
-<br/>
-<div align="center">
-  <a href="https://github.com/TheGoldenDev/portfolio-website">
-    <img src="assets/images/logo/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
 <h3 align="center">Portfolio Website</h3>
 
   <p align="center">
@@ -39,7 +32,7 @@
 
 ## About The Project
 
-This is a Spiderman: No way <i>Homeage</i> personal portfolio website I built to demonstrate the skills I have acquired in front end web development & design. It was built with semantic HTML5, CSS (Using Bootstrap and CSS Flexbox), Javascript, and Particles.js. It is currently hosted live online at <a href="https://www.captivatingwebsite.com/">www.captivatingwebsite.com</a> so that people who would like to hire me for web development can learn about me, and have several different ways to contact me. The contact form currently works using Netlify Forms, but will not work on a development server. The project can easily be hosted on your machine by cloning the repo and running the website using Live Server or by using npm to run a localhost port on your machine.
+This is a Spider-Man: No Way <i>Homeage</i> personal portfolio website I built to demonstrate the skills I have acquired in front end web development & design and my love for superheros! It was built with semantic HTML5, CSS (Using Bootstrap and CSS Flexbox), Javascript, and Particles.js. It is currently hosted live online at <a href="https://www.captivatingwebsite.com/">www.captivatingwebsite.com</a> so that people who would like to hire me for web development can learn about me, and have several different ways to contact me. The contact form currently works using Netlify Forms, but will not work on a development server. The project can easily be hosted on your machine by cloning the repo and running the website using Live Server or by using npm to run a localhost port on your machine.
 
 <h3>The features I have built into the page for CSS are:</h3>
 <ol>
@@ -95,4 +88,3 @@ Project Link: [https://github.com/TheGoldenDev/portfolio-website](https://github
 [license-url]: https://github.com/TheGoldenDev/portfolio-website/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/spencer-wood-web-dev
-[product-screenshot]: images/screenshot.png
