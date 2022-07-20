@@ -1,3 +1,5 @@
+let Projects = require('./projects.js');
+
 // Sticky Navigation
 function stickyHeader() {
   let w = window.innerWidth;
@@ -40,3 +42,5 @@ function menuScript() {
   });
 }
 menuScript();
+
+//Import JS projects array class here
