@@ -1,52 +1,141 @@
-//import react files
+// This function returns a list of projects and it's data
 
-const projectsArray = [
-  {
-    name: 'Audiofy',
-    type: 'React Application',
-    src: 'assets/images/portfolio/audiofy-screen.webp',
-    alt: 'Audiofy app screenshot',
-    href: 'https://audiofy-app-797a94.netlify.app/',
-  },
-  {
-    name: 'The Better Batter Cakeology',
-    type: 'Website',
-    src: 'assets/images/portfolio/audiofy-screen.webp',
-    alt: 'The Better Batter Cakeology website screenshot',
-    href: 'assets/images/portfolio/tbbc-screen.webp',
-  },
-  {
-    name: 'Adaptive Furniture Design',
-    type: 'Website',
-    src: 'assets/images/portfolio/adapt-screen.webp',
-    alt: 'Adaptive Furniture Design website screenshot',
-    href: 'https://adapt-frn-07e28c.netlify.app/',
-  },
-  {
-    name: 'Ravenous',
-    type: 'React Application',
-    src: 'assets/images/portfolio/ravenous-screen.webp',
-    alt: 'Ravenous app screenshot',
-    href: 'https://ravenous-yelp-c09825.netlify.app/',
-  },
-  {
-    name: 'ASRC Website',
-    type: 'React Application',
-    src: 'assets/images/portfolio/asrc-screen.webp',
-    alt: 'ASRC website screenshot',
-    href: 'https://asrc-demo-9884cc.netlify.app/',
-  },
-  {
-    name: 'LBSY',
-    type: 'Website',
-    src: 'assets/images/portfolio/lbsy-screen.webp',
-    alt: 'LBSY website screenshot',
-    href: 'https://branching-tree-fa9ff6.netlify.app/',
-  },
-];
+const ProjectDOMElement = (project) => { 
 
-//Create project class for projects
+  let outerDivContainer = divElement({
+    class: 'item col-md-6 col-lg-4'
+  })
 
-//add function to loop through array
+  let anchorComponent = anchorElement({
+    class: "portfolio-item",
+    href: project.href
+  })
 
-//export to main.js
+  let figureComponent = figureElement({
+    class: 'portfolio-thumb'
+  })
+
+  let imgComponent = imgElement({
+    src: project.src,
+    alt: project.alt
+  })
+
+  let overlayWrapperDivComponent = divElement({
+    class: "overlay-wrapper"
+  })
+
+  let overlayDivComponent = divElement({
+    class: "overlay"
+  })
+  
+  let portfolioInfoDivComponent = divElement({
+    class: "portfolio-info"
+  })
+
+  let paragraphComponent = paragraphElement({
+    class: "cap",
+    text: project.type
+  })
+
+  let headerComponent = headerThreeElement({
+    class: "heading",
+    text: project.name
+  })
+
+
+
+  figureComponent = addElement(figureComponent, imgComponent)
+  anchorComponent = addElement(anchorComponent, figureComponent)
+  overlayWrapperDivComponent = addElement(overlayWrapperDivComponent, overlayDivComponent)
+  portfolioInfoDivComponent = addElement(portfolioInfoDivComponent, paragraphComponent)
+  portfolioInfoDivComponent = addElement(portfolioInfoDivComponent, headerComponent)
+  overlayWrapperDivComponent = addElement(overlayWrapperDivComponent,portfolioInfoDivComponent)
+  anchorComponent = addElement(anchorComponent, overlayWrapperDivComponent)
+  outerDivContainer = addElement(outerDivContainer, anchorComponent)
+
+  return outerDivContainer;
+}
+
+// function to handle nesting
+const addElement = (parent, child) => { 
+  parent.appendChild(child)
+  return parent
+}
+
+// functions to generate elements
+const divElement = (props) => { 
+  let divEle = document.createElement('div')
+  if (props.class) { 
+    props.class.split(" ").forEach(className => {
+      divEle.classList.add(className)
+    });
+  }
+  return divEle;
+}
+
+const anchorElement = (props) => { 
+  let anchorComponent = document.createElement('a')
+  if (props.class) { 
+    props.class.split(" ").forEach(className => {
+      anchorComponent.classList.add(className)
+    });
+  }
+  if (props.href) { 
+    anchorComponent.setAttribute('href', props.href)
+  }
+  return anchorComponent;
+}
+
+const figureElement = (props) => { 
+  let figureComponent = document.createElement('figure')
+  if (props.class) { 
+    props.class.split(" ").forEach(className => {
+      figureComponent.classList.add(className)
+    });
+  }
+  return figureComponent;
+}
+
+const imgElement = (props) => { 
+  let imgComponent = document.createElement('img')
+  if (props.alt) { 
+    imgComponent.setAttribute('alt', props.alt)
+  }
+  if (props.src) { 
+    imgComponent.setAttribute('src', props.src)
+  }
+
+  return imgComponent;
+
+}
+
+const paragraphElement = (props) => { 
+  let paragraphComponent = document.createElement('p')
+  if (props.class) { 
+    props.class.split(" ").forEach(className => {
+      paragraphComponent.classList.add(className)
+    });
+  }
+  if (props.text) { 
+    paragraphComponent.textContent = props.text
+  }
+ 
+  return paragraphComponent;
+}
+
+const headerThreeElement = (props) => { 
+  let headerThreeComponent = document.createElement('h3')
+  if (props.class) { 
+    props.class.split(" ").forEach(className => {
+      headerThreeComponent.classList.add(className)
+    });
+  }
+  if (props.text) { 
+    headerThreeComponent.textContent = props.text
+  }
+ 
+  return headerThreeComponent;
+  
+}
+
+export default ProjectDOMElement;

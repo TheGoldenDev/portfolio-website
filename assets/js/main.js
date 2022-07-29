@@ -1,4 +1,5 @@
-let Projects = require('./projects.js');
+import ProjectDOMElement from './projects.js';
+import getProjectsList from './project-list.js';
 
 // Sticky Navigation
 function stickyHeader() {
@@ -44,3 +45,89 @@ function menuScript() {
 menuScript();
 
 //Import JS projects array class here
+let projectList = getProjectsList()
+projectList.forEach(project => {
+  let projectEle = ProjectDOMElement(project)
+  const portfolioProjectSection = document.querySelector('#portfolio-block .row.portfolio-grid');
+  portfolioProjectSection.appendChild(projectEle)
+})
+
+$(document).ready(function () {
+  $('form#contact-form').submit(function (e) {
+    e.preventDefault();
+    $('form#contact-form .error').remove();
+    var hasError = false;
+    var $email = $('form input[name="email');
+    var $name = $('form input[name="name');
+    var $message = $('form textarea[name="message');
+    var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+    if ($email.val() == '' || !re.test($email.val())) {
+      $('#email')
+        .parent()
+        .append('<span class="error">Please provide a valid email.</span>');
+      $('#email').addClass('inputError');
+      hasError = true;
+    }
+
+    if ($name.val() == '') {
+      $('#name')
+        .parent()
+        .append('<span class="error">Please provide your name.</span>');
+      $('#name').addClass('inputError');
+      hasError = true;
+    }
+
+    if ($message.val() == '') {
+      $('#message')
+        .parent()
+        .append('<span class="error">Please enter a message.</span>');
+      $('#message').addClass('inputError');
+      hasError = true;
+    }
+
+    if (!hasError) {
+      var url = '/assets/php/contact.php';
+      $.ajax({
+        type: 'POST',
+        url: url,
+        data: $('#contact-form').serialize(),
+      })
+        .done(function () {
+          // Make sure that the formMessages div has the 'success' class.
+          $('form#contact-form').removeClass('error');
+          $('form#contact-form').addClass('success');
+
+          // Set the message text.
+          $('#contact_modal').slideUp(300);
+          $('.modal-backdrop').hide();
+          var successMessage = $('form#contact-form').prepend(
+            '<span class="success">Thank you. Your email was sent successfully.</span>'
+          );
+          setTimeout(successMessage, 2000);
+
+          // Clear the form.
+          $(
+            'form input[name="email"], form input[name="name"], form textarea[name="message"]'
+          ).val('');
+          window.open("/assets/files/contact.txt");
+        })
+        .fail(function (data) {
+          // Make sure that the formMessages div has the 'error' class.
+          console.log(data);
+          $('form#contact-form').removeClass('success');
+          $('form#contact-form').addClass('error');
+
+          // Set the message text.
+          if (data.responseText !== '') {
+            $('form#contact-form').text(data.responseText);
+          } else {
+            $('form#contact-form').prepend(
+              '<span class="error">Oops! An error occured and your message could not be sent.</span>'
+            );
+          }
+        });
+    }
+    return false;
+  });
+});
