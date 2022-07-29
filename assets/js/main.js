@@ -52,17 +52,21 @@ projectList.forEach(project => {
   portfolioProjectSection.appendChild(projectEle)
 })
 
+
+//
 $(document).ready(function () {
   $('form#contact-form').submit(function (e) {
     e.preventDefault();
     $('form#contact-form .error').remove();
-    var hasError = false;
-    var $email = $('form input[name="email');
-    var $name = $('form input[name="name');
-    var $message = $('form textarea[name="message');
-    var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    let hasError = false;
+    let $email = $('form input[name="email');
+    let $name = $('form input[name="name');
+    let $message = $('form textarea[name="message');
+    //set regular expression for email
+    let emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
-    if ($email.val() == '' || !re.test($email.val())) {
+    // Use regex to check email field value
+    if ($email.val() == '' || !emailRegex.test($email.val())) {
       $('#email')
         .parent()
         .append('<span class="error">Please provide a valid email.</span>');
@@ -86,8 +90,9 @@ $(document).ready(function () {
       hasError = true;
     }
 
+    // Send the email if there are no errors
     if (!hasError) {
-      var url = '/assets/php/contact.php';
+      let url = '/assets/php/contact.php';
       $.ajax({
         type: 'POST',
         url: url,
@@ -101,7 +106,7 @@ $(document).ready(function () {
           // Set the message text.
           $('#contact_modal').slideUp(300);
           $('.modal-backdrop').hide();
-          var successMessage = $('form#contact-form').prepend(
+          let successMessage = $('form#contact-form').prepend(
             '<span class="success">Thank you. Your email was sent successfully.</span>'
           );
           setTimeout(successMessage, 2000);

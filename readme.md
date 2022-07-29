@@ -29,25 +29,14 @@
 
 ## About The Project
 
-This is a Spider-Man: No Way <i>Homeage</i> personal portfolio website I built to demonstrate the skills I have acquired in front end web development & design and my love for superheros! It was built with semantic HTML5, CSS (Using Bootstrap and CSS Flexbox), Javascript, and Particles.js. It is currently hosted live online at <a href="https://www.captivatingwebsite.com/">www.captivatingwebsite.com</a> so that people who would like to hire me for web development can learn about me, and have several different ways to contact me. The contact form currently works using Netlify Forms, but will not work on a development server. The project can easily be hosted on your machine by cloning the repo and running the website using Live Server or by using npm to run a localhost port on your machine.
+This is a Spider-Man: No Way <i>Homeage</i> personal portfolio website I built to demonstrate the skills I have acquired in front end web development & design, and my love for superheros! It was built with HTML, CSS (Using Bootstrap and CSS Flexbox), Javascript, PHP, and Particles.js. The website is online at <a href="https://www.captivatingwebsite.com/">www.captivatingwebsite.com</a> so people interested in hiring me for web development can learn about me, see my experience, and contact me. The contact form currently works using Netlify Forms, but will not work on a development server. You can view my project online at the url link above or locally by cloning the repo and running the website using the Live Server extension in Visual Studio Code or with npm by running a localhost port on your machine.
 
-<h3>The features I have built into the page for CSS are:</h3>
-<ol>
-  <li>Using css animations to make the items in the Abilities section pulse when they are hovered over.</li>
-  <li>Using css animations to make the items in the Abilities section wiggle back and forth.</li>
-  <li>Using :nth-child to style the hamburger menu.</li>
-  <li>Using css animations to turn the hamburger menu into an "X" when the menu is open, and back to a hamburger when closed.</li>
-  <li>Using flex order to move my picture to the top of the About section when the screen size is for a mobile device.</li>
-  <li>Hiding the mobile navigation when the hamburger is not "clicked".</li>
-  <li>And many more!</li>
-</ol>
 
-<h3>The features I have built into the page for JavaScript are:</h3>
+<h3>JavaScript Project Features:</h3>
 <ol>
-  <li>A fixed navigation bar that scrolls down with the page on desktop.</li>
-  <li>A mobile menu that pops out with the hamburger icon is clicked on a tablet or smaller device.</li>
-  <li>A script that checks if the user is in darkmode browser to serve the favicon that will be seen better.</li>
-  <li>An interactive particle header that I did a few javascript adjustments for to have it resemble a spiderweb</li>
+  <li>I created a form that saves the values (on click of Submit button) to an external .txt file using PHP and JavaScript and prompts a download for the file while also sending an email via AJAX. Find this code. This code is in contact.php and line 114 in main.js</li>
+  <li>I implemented a regular expression to check if the email is properly formatted before accepting a form submit. Contact fields also include conditional logic to check for empty fields, prevent them from being submitted, and then display a notification message to the form user in HTML. Find the code on lines 57 - 138 in main.js</li>
+  <li>My portfolio section had most of it's static HTML replaced with JS generated elements that utilize a whole lot of variables, loops, and functions! Find most of this code in projects.js. It is also imported into main.js and my project array is in project-list.js.</li>
 </ol>
 
 I hope you enjoy!

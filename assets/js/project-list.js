@@ -11,9 +11,9 @@ const getProjectsList = () => {
       {
         name: 'The Better Batter Cakeology',
         type: 'Website',
-        src: 'assets/images/portfolio/audiofy-screen.webp',
+        src: 'assets/images/portfolio/tbbc-screen.webp',
         alt: 'The Better Batter Cakeology website screenshot',
-        href: 'assets/images/portfolio/tbbc-screen.webp',
+        href: 'https://stoic-saha-95a074.netlify.app/',
       },
       {
         name: 'Adaptive Furniture Design',
