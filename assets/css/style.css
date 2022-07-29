@@ -1,6 +1,7 @@
 /*
 Global Styles
 */
+
 html {
   font-size: 100%;
 }
@@ -84,9 +85,11 @@ h6 {
     font-size: 32px;
   }
 }
+
 /*
 Bootstrap Grid Styles
 */
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -1741,6 +1744,7 @@ Footer
 /*
 Particles JS Position for Spiders
 */
+
 #particles-js {
   height: 100%;
   position: absolute;

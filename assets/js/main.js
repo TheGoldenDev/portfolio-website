@@ -109,13 +109,14 @@ $(document).ready(function () {
           let successMessage = $('form#contact-form').prepend(
             '<span class="success">Thank you. Your email was sent successfully.</span>'
           );
-          setTimeout(successMessage, 2000);
+          setTimeout(successMessage, 5000);
 
+          // Prompt the .txt file download
+          window.open("/assets/files/contact.txt");
           // Clear the form.
           $(
             'form input[name="email"], form input[name="name"], form textarea[name="message"]'
           ).val('');
-          window.open("/assets/files/contact.txt");
         })
         .fail(function (data) {
           // Make sure that the formMessages div has the 'error' class.
